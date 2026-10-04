@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "AZ Crypto",
+    "slug": "az-crypto",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "az-crypto",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#F4F7F8",
+      "resizeMode": "contain",
+      "image": "./assets/images/icon.png"
+    },
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {},
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": ["expo-router", ["expo-notifications", { "defaultChannel": "price-alerts" }]],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

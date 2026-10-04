@@ -1,0 +1,1 @@
+- [Crypto app data boundaries](crypto-app-data-boundaries.md) — keep RSS off browser requests; market alerts are foreground-only until background infrastructure exists.

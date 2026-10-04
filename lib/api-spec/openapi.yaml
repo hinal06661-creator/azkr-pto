@@ -24,6 +24,26 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /crypto/news:
+    get:
+      operationId: listCryptoNews
+      tags: [crypto]
+      summary: List recent crypto news from trusted publishers
+      responses:
+        "200":
+          description: Recent news items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CryptoNewsStory"
+        "502":
+          description: News feeds are temporarily unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +53,33 @@ components:
           type: string
       required:
         - status
+    CryptoNewsStory:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        summary:
+          type: string
+        url:
+          type: string
+        source:
+          type: string
+        publishedAt:
+          type: string
+      required:
+        - id
+        - title
+        - summary
+        - url
+        - source
+        - publishedAt
+    ApiError:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
 
