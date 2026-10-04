@@ -37,6 +37,7 @@ const english = {
   search: 'Search coins',
   overview: 'Market overview',
   liveMarket: 'Live market',
+  adPlaceholder: 'Advertisement space',
   dailyChange: '24h change',
   volume: '24h volume',
   marketCap: 'Market cap',
@@ -107,7 +108,7 @@ const copy: Record<Locale, Record<TranslationKey, string>> = {
   en: english,
   az: {
     home: 'Ana səhifə', markets: 'Bazar', alerts: 'Siqnallar', settings: 'Parametrlər',
-    search: 'Coin axtar', overview: 'Bazar icmalı', liveMarket: 'Canlı bazar',
+    search: 'Coin axtar', overview: 'Bazar icmalı', liveMarket: 'Canlı bazar', adPlaceholder: 'Reklam yeri',
     dailyChange: '24 saatlıq dəyişiklik', volume: '24 saatlıq həcm', marketCap: 'Bazar dəyəri',
     dayRange: '24 saatlıq aralıq', topMovers: 'Ən çox dəyişənlər', gainers: 'Ən çox artanlar',
     losers: 'Ən çox azalanlar', latestNews: 'Son xəbərlər', allNews: 'Bütün xəbərlər',
@@ -137,7 +138,7 @@ const copy: Record<Locale, Record<TranslationKey, string>> = {
   },
   tr: {
     home: 'Ana sayfa', markets: 'Piyasalar', alerts: 'Alarmlar', settings: 'Ayarlar',
-    search: 'Coin ara', overview: 'Piyasa özeti', liveMarket: 'Canlı piyasa',
+    search: 'Coin ara', overview: 'Piyasa özeti', liveMarket: 'Canlı piyasa', adPlaceholder: 'Reklam alanı',
     dailyChange: '24 saatlık değişim', volume: '24 saatlik hacim', marketCap: 'Piyasa değeri',
     dayRange: '24 saatlik aralık', topMovers: 'En çok değişenler', gainers: 'En çok yükselenler',
     losers: 'En çok düşenler', latestNews: 'Son haberler', allNews: 'Tüm haberler',
@@ -167,7 +168,7 @@ const copy: Record<Locale, Record<TranslationKey, string>> = {
   },
   ru: {
     home: 'Главная', markets: 'Рынки', alerts: 'Оповещения', settings: 'Настройки',
-    search: 'Поиск монет', overview: 'Обзор рынка', liveMarket: 'Рынок в реальном времени',
+    search: 'Поиск монет', overview: 'Обзор рынка', liveMarket: 'Рынок в реальном времени', adPlaceholder: 'Место для рекламы',
     dailyChange: 'Изменение за 24 ч', volume: 'Объём за 24 ч', marketCap: 'Капитализация',
     dayRange: 'Диапазон за 24 ч', topMovers: 'Лидеры изменений', gainers: 'Лидеры роста',
     losers: 'Лидеры падения', latestNews: 'Последние новости', allNews: 'Все новости',

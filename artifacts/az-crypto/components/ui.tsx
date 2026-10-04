@@ -19,6 +19,7 @@ import type { MarketCoin } from '@/lib/market';
 
 export function Screen({ children }: { children: ReactNode }) {
   const colors = useColors();
+  const t = useT();
   return (
     <SafeAreaView
       edges={Platform.OS === 'web' ? [] : ['top']}
@@ -28,6 +29,18 @@ export function Screen({ children }: { children: ReactNode }) {
         Platform.OS === 'web' ? { paddingTop: 67, paddingBottom: 34 } : null,
       ]}
     >
+      <View
+        accessibilityLabel={t('adPlaceholder')}
+        style={[
+          styles.adSlot,
+          { backgroundColor: colors.card, borderColor: colors.border },
+        ]}
+      >
+        <Feather name="tag" size={14} color={colors.mutedForeground} />
+        <Text style={[styles.adSlotText, { color: colors.mutedForeground }]}>
+          {t('adPlaceholder')}
+        </Text>
+      </View>
       {children}
     </SafeAreaView>
   );
@@ -343,6 +356,21 @@ export function localeLabel(locale: Locale) {
 
 const styles = StyleSheet.create({
   screen: { flex: 1 },
+  adSlot: {
+    minHeight: 46,
+    marginHorizontal: 20,
+    marginTop: 8,
+    marginBottom: 6,
+    paddingHorizontal: 14,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    borderWidth: 1,
+    borderStyle: 'dashed',
+    borderRadius: 14,
+  },
+  adSlotText: { fontSize: 11, fontWeight: '600', letterSpacing: 0.3 },
   content: { paddingHorizontal: 20, paddingTop: 12, gap: 22 },
   header: { flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 2 },
   pageTitle: { fontSize: 27, fontWeight: '800', letterSpacing: -0.7 },
