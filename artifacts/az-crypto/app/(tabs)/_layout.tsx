@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform, StyleSheet, useColorScheme, View } from 'react-native';
 import { useColors } from '@/hooks/useColors';
-import { Feather } from '@expo/vector-icons';
+import { Feather, Ionicons } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
 import { isLiquidGlassAvailable } from 'expo-glass-effect';
 import { Tabs } from 'expo-router';
@@ -24,6 +24,10 @@ function NativeTabLayout() {
       <NativeTabs.Trigger name="alerts">
         <NativeTabs.Trigger.Icon sf={{ default: 'bell', selected: 'bell.badge.fill' }} />
         <NativeTabs.Trigger.Label>{t('alerts')}</NativeTabs.Trigger.Label>
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="education">
+        <NativeTabs.Trigger.Icon sf={{ default: 'graduationcap', selected: 'graduationcap.fill' }} md="school" />
+        <NativeTabs.Trigger.Label>{t('education')}</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="settings">
         <NativeTabs.Trigger.Icon sf={{ default: 'gearshape', selected: 'gearshape.fill' }} />
@@ -93,6 +97,13 @@ function ClassicTabLayout() {
         options={{
           title: t('alerts'),
           tabBarIcon: ({ color }) => isIOS ? <SymbolView name="bell" tintColor={color} size={22} /> : <Feather name="bell" size={20} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="education"
+        options={{
+          title: t('education'),
+          tabBarIcon: ({ color }) => isIOS ? <SymbolView name="graduationcap" tintColor={color} size={22} /> : <Ionicons name="school-outline" size={21} color={color} />,
         }}
       />
       <Tabs.Screen
