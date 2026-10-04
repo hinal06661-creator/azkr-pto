@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "AZ Crypto",
-    "slug": "az-crypto",
+    "name": "AZ KRİPTO",
+    "slug": "azkripto",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "az-crypto",
+    "scheme": "azkripto",
     "userInterfaceStyle": "automatic",
     "splash": {
       "backgroundColor": "#F4F7F8",
@@ -13,13 +13,24 @@
       "image": "./assets/images/icon.png"
     },
     "ios": {
-      "supportsTablet": false
+      "supportsTablet": false,
+      "bundleIdentifier": "com.azkripto.app"
     },
-    "android": {},
+    "android": {
+      "package": "com.azkripto.app"
+    },
     "web": {
       "favicon": "./assets/images/icon.png"
     },
-    "plugins": ["expo-router", ["expo-notifications", { "defaultChannel": "price-alerts" }]],
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "price-alerts"
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true

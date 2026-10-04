@@ -44,7 +44,7 @@ export default function HomeScreen() {
               <Feather name="activity" size={19} color="#43D3B0" />
             </View>
             <View>
-              <Text style={{ color: colors.foreground, fontSize: 17, fontWeight: '800', letterSpacing: -0.3 }}>AZ Crypto</Text>
+              <Text style={{ color: colors.foreground, fontSize: 17, fontWeight: '800', letterSpacing: -0.3 }}>AZ KRİPTO</Text>
               <Text style={{ color: colors.mutedForeground, fontSize: 11, marginTop: 2 }}>{t('liveMarket')}</Text>
             </View>
           </View>
