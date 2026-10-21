@@ -13,9 +13,7 @@
     },
     "production": {
       "autoIncrement": true,
-      "env": {
-        "NPM_CONFIG_FROZEN_LOCKFILE": "false"
-      }
+      "pnpm": "10.26.1"
     }
   },
   "submit": {
